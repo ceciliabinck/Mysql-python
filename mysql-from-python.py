@@ -14,12 +14,11 @@ connection = pymysql.connect(host='localhost',
 
 try:
     # Run a query
-    with connection.cursor() as cursor:
-        cursor.execute(""" CREATE TABLE IF NOT EXIST
-                        Friends(name char(20), age int, DOB datetime);""")
-
-        # note that the above will still display a warning (not errror)if the 
-        # tabel already exists
+    with connection.cursor(pymysql.cursors.DictCursor) as cursor:
+        sql = "SELECT * FROM Genre;"
+        cursor.execute(sql)
+        for row in cursor:
+            print(row)
 finally:
     # close the connection, regardless of whether the above was successful
     connection.close()
