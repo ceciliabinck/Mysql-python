@@ -3,8 +3,7 @@ import pymysql
 
 
 
-# Get username from cloud9 workspace
-# modify this variable if running on another environment
+# Get username from another environment
 username = os.getenv("USER")
 
 # connect the to database
