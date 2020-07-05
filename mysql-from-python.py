@@ -2,11 +2,10 @@ import os
 import pymysql
 
 
-
-
 # Get username from  workspace
 # modify this variable if running on 
 username = os.getenv("USER")
+
 
 # connect the to database
 connection = pymysql.connect(host='localhost',

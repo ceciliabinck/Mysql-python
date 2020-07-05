@@ -1,2 +1,5 @@
 Chinook_Mysql_AutoIncrementPKs.sql
 test.sql
+env.py
+__pycache__/
+
